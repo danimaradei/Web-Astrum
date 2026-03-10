@@ -227,7 +227,7 @@ section, nav, footer {
   line-height: 0.9;
   letter-spacing: 0.08em;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--cyan) 50%, var(--purple) 100%);
+  background: linear-gradient(135deg, var(--navy) 0%, var(--cyan) 50%, var(--purple) 100%);  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -282,8 +282,8 @@ section, nav, footer {
   box-shadow: 0 0 10px rgba(0, 150, 214, 0.6);
 }
 
-.orbit-2 .orbit-dot { background: var(--purple); box-shadow: 0 0 10px rgba(123, 45, 139, 0.5); }
-.orbit-3 .orbit-dot { background: var(--orange); box-shadow: 0 0 10px rgba(240, 112, 48, 0.5); }
+.orbit-2 .orbit-dot { background: var(--orange); box-shadow: 0 0 10px rgba(240, 112, 48, 0.5); }
+.orbit-3 .orbit-dot { background: var(--purple); box-shadow: 0 0 10px rgba(123, 45, 139, 0.5); }  
 
 @keyframes spin {
   from { transform: translate(-50%, -50%) rotate(0deg); }
@@ -523,8 +523,8 @@ section, nav, footer {
 }
 
 .edition-card:hover {
-  border-color: rgba(0, 150, 214, 0.35);
-  box-shadow: 0 6px 24px rgba(0, 150, 214, 0.1);
+  border-color: rgba(240, 112, 48, 0.5);
+  box-shadow: 0 6px 24px rgba(214, 125, 0, 0.1);
   transform: translateX(6px);
 }
 
@@ -552,9 +552,9 @@ section, nav, footer {
 }
 
 .edition-type.especial {
-  color: var(--purple);
-  background: rgba(123, 45, 139, 0.08);
-  border-color: rgba(123, 45, 139, 0.2);
+  color: var(--orange);
+  background: rgba(240, 112, 48, 0.08);
+  border-color: rgba(240, 112, 48, 0.2);
 }
 
 .edition-date { font-size: 0.78rem; color: var(--text-muted); }
@@ -677,8 +677,8 @@ section, nav, footer {
 }
 
 .contact-link:hover {
-  border-color: rgba(0, 150, 214, 0.4);
-  box-shadow: 0 4px 16px rgba(0, 150, 214, 0.1);
+  border-color: rgba(240, 112, 48, 0.5);
+  box-shadow: 0 6px 24px rgba(214, 125, 0, 0.1);
   transform: translateX(5px);
 }
 
