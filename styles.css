@@ -110,6 +110,14 @@ section, nav, footer {
   font-weight: 400;
 }
 
+/* Ensure the nav logo image fits inside the navbar */
+.nav-logo-img {
+  max-height: calc(var(--nav-h) - 16px); /* leave room for padding */
+  width: auto;
+  display: block;
+}
+
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -437,10 +445,10 @@ section, nav, footer {
 }
 
 .about-card:hover {
-  border-color: rgba(0, 150, 214, 0.4);
   background: var(--white);
   transform: translateY(-4px);
-  box-shadow: 0 8px 28px rgba(0, 150, 214, 0.1);
+  border-color: rgba(240, 112, 48, 0.5);
+  box-shadow: 0 6px 24px rgba(214, 125, 0, 0.1);
 }
 
 .card-icon { font-size: 1.8rem; margin-bottom: 0.75rem; }
