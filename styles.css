@@ -231,7 +231,7 @@ section, nav, footer {
 .hero-title {
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: clamp(4.5rem, 14vw, 11rem);
+  font-size: clamp(2.5rem, 10vw, 8rem);
   line-height: 0.9;
   letter-spacing: 0.08em;
   margin-bottom: 1.5rem;
