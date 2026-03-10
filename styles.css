@@ -911,3 +911,12 @@ section, nav, footer {
   width: 0%;
   background: linear-gradient(to right, #00a8e8, #f07030);
 }
+
+@media (max-width: 768px) {
+  #intro-screen {
+    background: #fff;
+  }
+  #intro-video {
+    object-fit: contain;
+  }
+}
