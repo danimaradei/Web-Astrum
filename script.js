@@ -134,37 +134,6 @@
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 })();
 
-
-// ── Counter animation ─────────────────────────────────────────────────────────
-(function initCounters() {
-  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
-
-  function animateCounter(el) {
-    const target = parseInt(el.dataset.target, 10);
-    const duration = 2000;
-    const startTime = performance.now();
-    function step(now) {
-      const progress = Math.min((now - startTime) / duration, 1);
-      el.textContent = Math.floor(easeOutCubic(progress) * target).toLocaleString();
-      if (progress < 1) requestAnimationFrame(step);
-      else el.textContent = target.toLocaleString();
-    }
-    requestAnimationFrame(step);
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateCounter(entry.target);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  document.querySelectorAll('.stat-number').forEach(n => observer.observe(n));
-})();
-
-
 // ── Active nav highlight ───────────────────────────────────────────────────────
 (function initActiveNav() {
   const sections = document.querySelectorAll('section[id]');
