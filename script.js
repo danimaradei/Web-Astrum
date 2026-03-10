@@ -2,6 +2,31 @@
    ASTRUM — SEDS ITBA · script.js (Light Theme)
    ================================================ */
 
+// ── Intro screen ──────────────────────────────────────────────────────────────
+(function initIntro() {
+  const screen = document.getElementById('intro-screen');
+  const video  = document.getElementById('intro-video');
+  const bar    = document.getElementById('intro-bar');
+
+  document.body.style.overflow = 'hidden';
+
+  function dismiss() {
+    screen.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  video.addEventListener('timeupdate', () => {
+    if (video.duration) {
+      bar.style.width = (video.currentTime / video.duration * 100) + '%';
+    }
+  });
+
+  video.addEventListener('ended', dismiss);
+
+  const fallback = setTimeout(dismiss, 8000);
+  video.addEventListener('ended', () => clearTimeout(fallback));
+})();
+
 // ── Floating Particles (light bg) ────────────────────────────────────────────
 (function initParticles() {
   const canvas = document.getElementById('stars-canvas');
