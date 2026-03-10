@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASTRUM — SEDS ITBA</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- CANVAS STARS -->
+  <canvas id="stars-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">
+      <span class="logo-astrum">ASTRUM</span>
+      <span class="logo-by">by SEDS ITBA</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">Sobre Astrum</a></li>
+      <li><a href="#editions">Ediciones</a></li>
+      <li><a href="#universities">Universidades</a></li>
+      <li><a href="#contact">Contacto</a></li>
+      <li><a href="https://seds-itba.vercel.app" target="_blank" class="nav-cta">SEDS ITBA</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Una iniciativa de SEDS ITBA
+      </div>
+      <h1 class="hero-title reveal">
+        <span class="title-line">ASTRUM</span>
+      </h1>
+      <p class="hero-subtitle reveal">
+        Ciclo de charlas y talleres aeroespaciales<br/>en colaboración con universidades de Argentina.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#editions" class="btn btn-primary">Ver Ediciones</a>
+        <a href="#about" class="btn btn-ghost">Conocer más</a>
+      </div>
+    </div>
+    <div class="hero-orbit">
+      <div class="orbit orbit-1">
+        <div class="orbit-dot"></div>
+      </div>
+      <div class="orbit orbit-2">
+        <div class="orbit-dot"></div>
+      </div>
+      <div class="orbit orbit-3">
+        <div class="orbit-dot"></div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label reveal">¿Qué es?</div>
+      <h2 class="section-title reveal">Un ciclo que<br/><em>conecta el futuro</em><br/>aeroespacial argentino.</h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            <strong>ASTRUM</strong> es una iniciativa de SEDS ITBA que reúne a estudiantes, investigadores y profesionales del sector aeroespacial en un ciclo de charlas y talleres de alto nivel.
+          </p>
+          <p>
+            Nacido en el ITBA y pensado para expandirse, ASTRUM convoca a universidades de toda Argentina para construir una comunidad interdisciplinaria apasionada por el espacio.
+          </p>
+          <p>
+            Cada edición explora temas de frontera: desde propulsión y satélites hasta política espacial, astrofísica y nuevas tecnologías de exploración.
+          </p>
+        </div>
+        <div class="about-cards reveal">
+          <div class="about-card">
+            <div class="card-icon">🛰️</div>
+            <h3>Charlas técnicas</h3>
+            <p>Expertos de la industria y la academia presentan proyectos y avances de vanguardia.</p>
+          </div>
+          <div class="about-card">
+            <div class="card-icon">🔧</div>
+            <h3>Talleres prácticos</h3>
+            <p>Actividades manos a la obra: desde diseño satelital hasta programación de misiones.</p>
+          </div>
+          <div class="about-card">
+            <div class="card-icon">🌐</div>
+            <h3>Red universitaria</h3>
+            <p>Colaboración activa entre universidades argentinas para potenciar el ecosistema espacial local.</p>
+          </div>
+          <div class="about-card">
+            <div class="card-icon">🚀</div>
+            <h3>Networking</h3>
+            <p>Conexiones reales entre estudiantes, investigadores y empresas del sector aeroespacial.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-number" data-target="5">0</div>
+          <div class="stat-label">Ediciones realizadas</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-target="12">0</div>
+          <div class="stat-label">Universidades colaboradoras</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-target="800">0</div>
+          <div class="stat-label">Participantes totales</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-target="40">0</div>
+          <div class="stat-label">Speakers invitados</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDITIONS -->
+  <section id="editions">
+    <div class="container">
+      <div class="section-label reveal">Agenda</div>
+      <h2 class="section-title reveal">Próximas ediciones<br/>& <em>eventos</em></h2>
+
+      <div class="editions-list">
+
+        <article class="edition-card reveal" data-type="charla">
+          <div class="edition-meta">
+            <span class="edition-type">Charla</span>
+            <span class="edition-date">Abril 2025</span>
+          </div>
+          <div class="edition-body">
+            <h3>Misiones lunares: el retorno de la humanidad a la Luna</h3>
+            <p>Análisis de los programas Artemis, Luna-25 y las misiones privadas que están redefiniendo la exploración lunar en la nueva era espacial.</p>
+            <div class="edition-info">
+              <span>📍 ITBA · Auditorio Principal</span>
+              <span>🤝 UBA · UTN</span>
+            </div>
+          </div>
+          <div class="edition-register">
+            <a href="#contact" class="btn btn-sm">Registrarse</a>
+          </div>
+        </article>
+
+        <article class="edition-card reveal" data-type="taller">
+          <div class="edition-meta">
+            <span class="edition-type taller">Taller</span>
+            <span class="edition-date">Mayo 2025</span>
+          </div>
+          <div class="edition-body">
+            <h3>Diseño de CubeSats desde cero</h3>
+            <p>Taller intensivo de dos jornadas donde aprenderás los fundamentos del diseño de satélites de pequeño formato, desde la misión hasta el lanzamiento.</p>
+            <div class="edition-info">
+              <span>📍 ITBA · Lab de Ingeniería</span>
+              <span>🤝 UNSAM · UNLP</span>
+            </div>
+          </div>
+          <div class="edition-register">
+            <a href="#contact" class="btn btn-sm">Registrarse</a>
+          </div>
+        </article>
+
+        <article class="edition-card reveal" data-type="charla">
+          <div class="edition-meta">
+            <span class="edition-type">Charla</span>
+            <span class="edition-date">Junio 2025</span>
+          </div>
+          <div class="edition-body">
+            <h3>Propulsión avanzada: iones, plasma y fotones</h3>
+            <p>Especialistas presentan los sistemas de propulsión que llevarán a la humanidad más allá del sistema solar. De la teoría al hardware real.</p>
+            <div class="edition-info">
+              <span>📍 Online + ITBA</span>
+              <span>🤝 UNC · UADE · FIUBA</span>
+            </div>
+          </div>
+          <div class="edition-register">
+            <a href="#contact" class="btn btn-sm">Registrarse</a>
+          </div>
+        </article>
+
+        <article class="edition-card reveal" data-type="taller">
+          <div class="edition-meta">
+            <span class="edition-type taller">Taller</span>
+            <span class="edition-date">Agosto 2025</span>
+          </div>
+          <div class="edition-body">
+            <h3>Programación de misiones con Python</h3>
+            <p>Herramientas reales para simular y analizar trayectorias orbitales, gestión de datos de satélites y automatización de subsistemas.</p>
+            <div class="edition-info">
+              <span>📍 ITBA · Laboratorio de Cómputo</span>
+              <span>🤝 UBA · ITBA</span>
+            </div>
+          </div>
+          <div class="edition-register">
+            <a href="#contact" class="btn btn-sm">Registrarse</a>
+          </div>
+        </article>
+
+        <article class="edition-card reveal" data-type="charla">
+          <div class="edition-meta">
+            <span class="edition-type">Charla</span>
+            <span class="edition-date">Septiembre 2025</span>
+          </div>
+          <div class="edition-body">
+            <h3>Industria espacial argentina: oportunidades y desafíos</h3>
+            <p>Representantes de CONAE, Satellogic e INVAP comparten el panorama del ecosistema espacial nacional y cómo los estudiantes pueden sumarse.</p>
+            <div class="edition-info">
+              <span>📍 ITBA · Auditorio</span>
+              <span>🤝 Múltiples universidades</span>
+            </div>
+          </div>
+          <div class="edition-register">
+            <a href="#contact" class="btn btn-sm">Registrarse</a>
+          </div>
+        </article>
+
+        <article class="edition-card reveal" data-type="especial">
+          <div class="edition-meta">
+            <span class="edition-type especial">Especial</span>
+            <span class="edition-date">Noviembre 2025</span>
+          </div>
+          <div class="edition-body">
+            <h3>ASTRUM Summit — Cierre de Año</h3>
+            <p>Gran evento de cierre con speakers internacionales, presentación de proyectos estudiantiles y ceremonia de reconocimiento a las universidades colaboradoras.</p>
+            <div class="edition-info">
+              <span>📍 ITBA · Salón de Actos</span>
+              <span>🤝 Todas las universidades</span>
+            </div>
+          </div>
+          <div class="edition-register">
+            <a href="#contact" class="btn btn-sm btn-special">Registrarse</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- UNIVERSITIES -->
+  <section id="universities">
+    <div class="container">
+      <div class="section-label reveal">Red colaborativa</div>
+      <h2 class="section-title reveal">Universidades<br/><em>participantes</em></h2>
+      <p class="section-desc reveal">ASTRUM crece gracias a la colaboración entre instituciones que comparten la visión de impulsar el sector aeroespacial argentino desde las aulas.</p>
+
+      <div class="uni-grid reveal">
+        <div class="uni-card">
+          <div class="uni-abbr">ITBA</div>
+          <div class="uni-name">Instituto Tecnológico de Buenos Aires</div>
+          <div class="uni-role">Organizador principal</div>
+        </div>
+        <div class="uni-card">
+          <div class="uni-abbr">UBA</div>
+          <div class="uni-name">Universidad de Buenos Aires</div>
+          <div class="uni-role">Colaborador activo</div>
+        </div>
+        <div class="uni-card">
+          <div class="uni-abbr">UTN</div>
+          <div class="uni-name">Universidad Tecnológica Nacional</div>
+          <div class="uni-role">Colaborador activo</div>
+        </div>
+        <div class="uni-card">
+          <div class="uni-abbr">UNSAM</div>
+          <div class="uni-name">Universidad Nacional de San Martín</div>
+          <div class="uni-role">Colaborador activo</div>
+        </div>
+        <div class="uni-card">
+          <div class="uni-abbr">UNLP</div>
+          <div class="uni-name">Universidad Nacional de La Plata</div>
+          <div class="uni-role">Colaborador activo</div>
+        </div>
+        <div class="uni-card">
+          <div class="uni-abbr">UNC</div>
+          <div class="uni-name">Universidad Nacional de Córdoba</div>
+          <div class="uni-role">Colaborador activo</div>
+        </div>
+        <div class="uni-card uni-card--join">
+          <div class="uni-join-icon">+</div>
+          <div class="uni-name">¿Tu universidad?</div>
+          <div class="uni-role"><a href="#contact">Sumate a la red →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label reveal">Contacto</div>
+      <h2 class="section-title reveal">Uníte al ciclo<br/><em>ASTRUM</em></h2>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p>¿Sos estudiante, docente, investigador o representante de una universidad? Escribinos para participar de ASTRUM como asistente, speaker o institución colaboradora.</p>
+
+          <div class="contact-links">
+            <a href="mailto:seds@itba.edu.ar" class="contact-link">
+              <span class="contact-link-icon">✉️</span>
+              <div>
+                <div class="contact-link-label">Email</div>
+                <div class="contact-link-value">seds@itba.edu.ar</div>
+              </div>
+            </a>
+            <a href="https://instagram.com/seds.itba" target="_blank" class="contact-link">
+              <span class="contact-link-icon">📸</span>
+              <div>
+                <div class="contact-link-label">Instagram</div>
+                <div class="contact-link-value">@seds.itba</div>
+              </div>
+            </a>
+            <a href="https://linkedin.com/company/seds-itba" target="_blank" class="contact-link">
+              <span class="contact-link-icon">💼</span>
+              <div>
+                <div class="contact-link-label">LinkedIn</div>
+                <div class="contact-link-value">SEDS ITBA</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <div class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Nombre completo</label>
+              <input type="text" id="name" placeholder="Tu nombre" />
+            </div>
+            <div class="form-group">
+              <label for="university">Universidad</label>
+              <input type="text" id="university" placeholder="Tu universidad" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="tu@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="role">¿Cómo querés participar?</label>
+              <select id="role">
+                <option value="">Seleccioná una opción</option>
+                <option value="asistente">Asistente</option>
+                <option value="speaker">Speaker / Conferencista</option>
+                <option value="universidad">Representante de universidad</option>
+                <option value="sponsor">Patrocinador</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea id="message" rows="4" placeholder="Contanos más sobre vos o tu propuesta..."></textarea>
+            </div>
+            <button class="btn btn-primary btn-full" id="submitBtn" onclick="handleSubmit()">Enviar mensaje</button>
+            <div id="formSuccess" class="form-success" style="display:none">
+              ✓ Mensaje enviado — ¡te contactamos pronto!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">ASTRUM</div>
+          <div class="footer-tagline">Una iniciativa de SEDS ITBA</div>
+        </div>
+        <div class="footer-links">
+          <a href="#about">Sobre Astrum</a>
+          <a href="#editions">Ediciones</a>
+          <a href="#universities">Universidades</a>
+          <a href="#contact">Contacto</a>
+          <a href="https://seds-itba.vercel.app" target="_blank">SEDS ITBA →</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 — ASTRUM · SEDS ITBA · Buenos Aires, Argentina</span>
+        <span>Students for the Exploration & Development of Space</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
