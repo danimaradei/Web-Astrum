@@ -275,9 +275,29 @@ section, nav, footer {
   animation: spin linear infinite;
 }
 
-.orbit-1 { width: 500px; height: 500px; animation-duration: 30s; }
-.orbit-2 { width: 750px; height: 750px; animation-duration: 50s; animation-direction: reverse; border-color: rgba(240, 112, 48, 0.07); }
-.orbit-3 { width: 1000px; height: 1000px; animation-duration: 80s; border-color: rgba(123, 45, 139, 0.1); }
+/* make orbits scale with viewport so smaller screens can show all three
+   the clamp() calls cap each size between a reasonable minimum and its
+   original pixel size. max values bumped to allow a little more room on
+   larger phones/tablets but still keep them contained; min sizes also
+   raised slightly so the dots remain visible. */
+.orbit-1 {
+  width: clamp(300px, 40vw, 550px);
+  height: clamp(300px, 40vw, 550px);
+  animation-duration: 30s;
+}
+.orbit-2 {
+  width: clamp(450px, 60vw, 850px);
+  height: clamp(450px, 60vw, 850px);
+  animation-duration: 50s;
+  animation-direction: reverse;
+  border-color: rgba(240, 112, 48, 0.07);
+}
+.orbit-3 {
+  width: clamp(600px, 80vw, 1100px);
+  height: clamp(600px, 80vw, 1100px);
+  animation-duration: 80s;
+  border-color: rgba(123, 45, 139, 0.1);
+}
 
 .orbit-dot {
   width: 6px; height: 6px;
@@ -295,6 +315,14 @@ section, nav, footer {
 @keyframes spin {
   from { transform: translate(-50%, -50%) rotate(0deg); }
   to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* extra responsive tweaks for very narrow screens */
+@media (max-width: 480px) {
+  /* bump up the very-small-screen versions slightly */
+  .orbit-1 { width: 200px; height: 200px; }
+  .orbit-2 { width: 300px; height: 300px; }
+  .orbit-3 { width: 400px; height: 400px; }
 }
 
 /* Scroll hint */
