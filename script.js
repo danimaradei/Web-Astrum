@@ -22,6 +22,7 @@
   });
 
   video.addEventListener('ended', dismiss);
+  screen.addEventListener('click', dismiss);
 
   const fallback = setTimeout(dismiss, 8000);
   video.addEventListener('ended', () => clearTimeout(fallback));
