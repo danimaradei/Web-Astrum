@@ -406,6 +406,16 @@ section, nav, footer {
   box-shadow: 0 8px 24px rgba(0, 150, 214, 0.3);
 }
 
+#btn-seds {
+  background: var(--purple); 
+}
+
+#btn-seds:hover {
+  background: #6a2575;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(123, 45, 139, 0.3);
+}
+
 .btn-ghost {
   background: transparent;
   color: var(--text-mid);
@@ -463,7 +473,11 @@ section, nav, footer {
 }
 
 /* --- ABOUT --- */
-#about { padding: 8rem 0; background: var(--bg); }
+#about {
+  padding: 8rem 0;
+  background: var(--bg);
+  border-top: 3px solid var(--orange);
+}
 
 .about-grid {
   display: grid;
@@ -516,7 +530,11 @@ section, nav, footer {
 .about-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
 
 /* --- UNIVERSITIES --- */
-#universities { padding: 8rem 0; background: var(--bg); }
+#universities {
+  padding: 8rem 0;
+  background: var(--bg-soft);
+  border-top: 3px solid var(--cyan);
+}
 
 .uni-grid {
   display: grid;
@@ -581,7 +599,11 @@ section, nav, footer {
 .uni-role a:hover { color: var(--navy); }
 
 /* --- CONTACT --- */
-#contact { padding: 8rem 0; background: var(--bg-soft); }
+#contact {
+  padding: 8rem 0;
+  background: var(--bg-soft);
+  border-top: 3px solid var(--cyan);
+}
 
 .contact-grid {
   display: grid;
@@ -852,7 +874,7 @@ section, nav, footer {
 /* --- WHY ASTRUM --- */
 #why {
   padding: 8rem 0;
-  background: var(--bg-soft);
+  background: var(--bg);
   border-top: 3px solid var(--orange);
 }
 
@@ -892,7 +914,7 @@ section, nav, footer {
 /* --- FORMATO --- */
 #formato {
   padding: 8rem 0;
-  background: var(--bg);
+  background: var(--bg-soft);
   border-top: 3px solid var(--cyan);
 }
 
@@ -950,7 +972,7 @@ section, nav, footer {
 /* --- AGENDA --- */
 #agenda {
   padding: 8rem 0;
-  background: var(--bg-soft);
+  background: var(--bg);
   border-top: 3px solid var(--orange);
 }
 
@@ -1027,7 +1049,7 @@ section, nav, footer {
 #sponsors {
   padding: 8rem 0;
   background: var(--bg-soft);
-  border-top: 3px solid var(--orange);
+  border-top: 3px solid var(--cyan);
 }
 
 .sponsors-grid {
@@ -1091,7 +1113,7 @@ section, nav, footer {
 #organizer {
   padding: 8rem 0;
   background: var(--bg);
-  border-top: 3px solid var(--cyan);
+  border-top: 3px solid var(--orange);
 }
 
 .organizer-grid {
@@ -1145,6 +1167,7 @@ section, nav, footer {
   background: var(--bg-soft);
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  border-bottom: 3px solid rgb(123, 45, 139);
 }
 
 .org-logo-placeholder img {
