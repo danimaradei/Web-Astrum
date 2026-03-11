@@ -740,11 +740,54 @@ section, nav, footer {
 
 .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; align-items: center; }
 
-.footer-links a {
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-social {
   text-decoration: none;
-  font-size: 0.82rem;
-  color: rgba(200, 184, 216, 0.65);
-  transition: color var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all var(--transition);
+}
+
+.footer-social:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+}
+
+.footer-social-icon { font-size: 1rem; }
+
+.footer-social-label {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.02em;
+}
+
+.footer-social--cta {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--cyan);
+  border-color: rgba(0,168,232,0.3);
+}
+
+.footer-social--cta:hover {
+  background: rgba(0,168,232,0.1);
+  border-color: var(--cyan);
 }
 
 .footer-links a:hover { color: #ffffff; }
