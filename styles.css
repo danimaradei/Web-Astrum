@@ -896,7 +896,7 @@ section, nav, footer {
   .edition-register { grid-column: 1 / -1; justify-content: flex-start; }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1330px) {
   :root { --nav-h: 60px; }
   #navbar { padding: 0 1.5rem; }
 
