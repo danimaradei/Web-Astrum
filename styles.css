@@ -875,10 +875,6 @@ section, nav, footer {
   transition: color var(--transition);
 }
 
-.footer-ig::before {
-  content: '📸 ';
-}
-
 .footer-ig:hover {
   color: rgba(255,255,255,0.9);
 }
