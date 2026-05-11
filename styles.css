@@ -922,12 +922,14 @@ section, nav, footer {
 
   .nav-links.open { display: flex; }
   .nav-toggle { display: flex; }
-  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
   .edition-card { grid-template-columns: 1fr; padding: 1.5rem; }
-  .footer-top { flex-direction: column; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .uni-grid { grid-template-columns: repeat(2, 1fr); }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 764px) {
+  .footer-top { flex-direction: column; }
 }
 
 @media (max-width: 480px) {
