@@ -1356,3 +1356,29 @@ section, nav, footer {
     font-size: 0.75rem;
   }
 }
+
+.agenda-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.agenda-map {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(30, 31, 69, 0.08);
+  min-height: 360px;
+}
+
+.agenda-map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .agenda-body { grid-template-columns: 1fr; }
+  .agenda-map { min-height: 260px; }
+}
