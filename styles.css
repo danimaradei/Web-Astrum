@@ -531,7 +531,7 @@ section, nav, footer {
 
 /* --- PARTICIPANTS --- */
 #participants {
-  padding: 8rem 0 0;
+  padding: 8rem 0 4rem;
   background: var(--bg-soft);
   border-top: 3px solid var(--cyan);
 }
@@ -540,85 +540,70 @@ section, nav, footer {
   padding-bottom: 3rem;
 }
 
-/* Wrapper con máscara para fade en los bordes */
-.participants-track-wrap {
-  overflow: hidden;
-  padding: 1rem 0 4rem;
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 8%,
-    black 92%,
-    transparent 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 8%,
-    black 92%,
-    transparent 100%
-  );
+.participants-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 2.5rem;
+  max-width: var(--container);
+  margin: 0 auto;
 }
 
-/* Track que se mueve */
+.carousel-btn {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 2.5rem;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  transition: color var(--transition);
+  user-select: none;
+}
+
+.carousel-btn:hover { color: var(--cyan); }
+
+.participants-track-wrap {
+  overflow: hidden;
+  flex: 1;
+  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+}
+
 .participants-track {
   display: flex;
   gap: 1.5rem;
   width: max-content;
-  animation: scroll-track 28s linear infinite;
+  will-change: transform;
 }
 
-.participants-track:hover {
-  animation-play-state: paused;
-}
-
-@keyframes scroll-track {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
-/* Cards */
 .participant-card {
   flex-shrink: 0;
   width: 220px;
+  height: 130px;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.75rem 2rem;
-  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1.75rem 2rem;
   transition: all var(--transition);
+  cursor: default;
 }
 
 .participant-card:hover {
   border-color: rgba(123, 45, 139, 0.35);
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(123, 45, 139, 0.1);
 }
 
-.participant-abbr {
-  font-family: var(--font-display);
-  font-size: 1.4rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  color: var(--purple);
-  margin-bottom: 0.5rem;
-}
-
-.participant-name {
-  font-size: 0.78rem;
-  color: var(--text-mid);
-  line-height: 1.4;
-  margin-bottom: 0.5rem;
-}
-
-.participant-role {
-  font-size: 0.68rem;
-  color: var(--text-muted);
-  font-family: var(--font-display);
-  letter-spacing: 0.06em;
+.participant-logo {
+  max-width: 160px;
+  max-height: 90px;
+  object-fit: contain;
 }
 
 .participant-card--join {
@@ -632,35 +617,6 @@ section, nav, footer {
   box-shadow: 0 12px 32px rgba(0, 150, 214, 0.1);
 }
 
-.participant-join-icon {
-  font-size: 2.5rem;
-  font-weight: 200;
-  color: var(--cyan);
-  line-height: 1;
-  margin-bottom: 0.5rem;
-}
-
-.participant-role a {
-  color: var(--cyan);
-  text-decoration: none;
-  transition: color var(--transition);
-}
-
-.participant-role a:hover { color: var(--navy); }
-
-/* Reducir velocidad en mobile */
-@media (max-width: 768px) {
-  .participants-track { animation-duration: 20s; }
-  .participant-card { width: 180px; }
-}
-
-.participant-logo {
-  max-width: 160px;
-  max-height: 90px;
-  object-fit: contain;
-  margin-bottom: 0.5rem;
-}
-
 .participant-join-link {
   display: flex;
   flex-direction: column;
@@ -669,9 +625,22 @@ section, nav, footer {
   text-decoration: none;
 }
 
-.participant-join-link .participant-name {
+.participant-join-icon {
+  font-size: 2rem;
   color: var(--cyan);
-  margin-bottom: 0;
+  line-height: 1;
+}
+
+.participant-join-link .participant-name {
+  font-size: 0.78rem;
+  color: var(--cyan);
+  text-align: center;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .participant-card { width: 170px; height: 110px; }
+  .participants-carousel { padding: 0 1.5rem; }
 }
 
 /* --- CONTACT --- */

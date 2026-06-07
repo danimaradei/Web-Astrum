@@ -134,113 +134,41 @@
     <p class="section-desc reveal">Una comunidad diversa de universidades, empresas y organismos conectados por una misma pasión: el espacio.</p>
   </div>
 
-  <div class="participants-track-wrap">
-    <div class="participants-track">
+  <div class="participants-carousel">
+    <button class="carousel-btn carousel-btn--prev" onclick="carouselMove(-1)">&#8249;</button>
 
-      <div class="participant-card">
-        <img src="SEDS Logo Black.png" alt="SEDS ITBA" class="participant-logo"/>
-      </div>
+    <div class="participants-track-wrap">
+      <div class="participants-track" id="participantsTrack">
 
-      <div class="participant-card">
-        <img src="CONAE.png" alt="CONAE" class="participant-logo"/>
-      </div>
+        <div class="participant-card"><img src="SEDS Logo Black.png" alt="SEDS ITBA" class="participant-logo"/></div>
+        <div class="participant-card"><img src="CONAE.png" alt="CONAE" class="participant-logo"/></div>
+        <div class="participant-card"><img src="ITBA.png" alt="ITBA" class="participant-logo"/></div>
+        <div class="participant-card"><img src="EPIC.png" alt="EPIC AEROSPACE" class="participant-logo"/></div>
+        <div class="participant-card"><img src="Crux.jpg" alt="Crux Aerospace" class="participant-logo"/></div>
+        <div class="participant-card participant-card--join">
+          <a href="#contact" class="participant-join-link">
+            <div class="participant-join-icon">+</div>
+            <div class="participant-name">¿Tu organización?</div>
+          </a>
+        </div>
 
-<!--
-      <div class="participant-card">
-        <div class="participant-abbr">UNLP</div>
-      </div>
--->
+        <!-- Duplicado para el loop infinito -->
+        <div class="participant-card"><img src="SEDS Logo Black.png" alt="SEDS ITBA" class="participant-logo"/></div>
+        <div class="participant-card"><img src="CONAE.png" alt="CONAE" class="participant-logo"/></div>
+        <div class="participant-card"><img src="ITBA.png" alt="ITBA" class="participant-logo"/></div>
+        <div class="participant-card"><img src="EPIC.png" alt="EPIC AEROSPACE" class="participant-logo"/></div>
+        <div class="participant-card"><img src="Crux.jpg" alt="Crux Aerospace" class="participant-logo"/></div>
+        <div class="participant-card participant-card--join">
+          <a href="#contact" class="participant-join-link">
+            <div class="participant-join-icon">+</div>
+            <div class="participant-name">¿Tu organización?</div>
+          </a>
+        </div>
 
-      <div class="participant-card">
-        <img src="ITBA.png" alt="ITBA" class="participant-logo"/>
       </div>
-
-<!--
-      <div class="participant-card">
-        <img src="CNEA.png" alt="CNEA" class="participant-logo"/>
-      </div>
--->
-
-<!--
-      <div class="participant-card">
-        <img src="ACEMA.jpg" alt="ACEMA" class="participant-logo"/>
-      </div>
--->
-
-      <div class="participant-card">
-        <img src="EPIC.png" alt="EPIC AEROSPACE" class="participant-logo"/>
-      </div>
-
-<!--
-      <div class="participant-card">
-        <img src="Constelar.png" alt="CONSTELAR" class="participant-logo"/>
-      </div>
--->
-
-      <div class="participant-card">
-        <img src="Crux.jpg" alt="Crux Aerospace" class="participant-logo"/>
-      </div>
-
-      <div class="participant-card participant-card--join">
-        <a href="#contact" class="participant-join-link">
-          <div class="participant-join-icon">+</div>
-          <div class="participant-name">¿Tu organización?</div>
-        </a>
-      </div>
-      
-<!-- Duplicado para el loop infinito -->
-      <div class="participant-card">
-        <img src="SEDS Logo Black.png" alt="SEDS ITBA" class="participant-logo"/>
-      </div>
-
-      <div class="participant-card">
-        <img src="CONAE.png" alt="CONAE" class="participant-logo"/>
-      </div>
-
-<!--
-      <div class="participant-card">
-        <div class="participant-abbr">UNLP</div>
-      </div>
--->
-
-      <div class="participant-card">
-        <img src="ITBA.png" alt="ITBA" class="participant-logo"/>
-      </div>
-
-<!--
-      <div class="participant-card">
-        <img src="CNEA.png" alt="CNEA" class="participant-logo"/>
-      </div>
--->
-
-<!--
-      <div class="participant-card">
-        <img src="ACEMA.jpg" alt="ACEMA" class="participant-logo"/>
-      </div>
--->
-
-      <div class="participant-card">
-        <img src="EPIC.png" alt="EPIC AEROSPACE" class="participant-logo"/>
-      </div>
-
-<!--
-      <div class="participant-card">
-        <img src="Constelar.png" alt="CONSTELAR" class="participant-logo"/>
-      </div>
--->
-
-      <div class="participant-card">
-        <img src="Crux.jpg" alt="Crux Aerospace" class="participant-logo"/>
-      </div>
-
-      <div class="participant-card participant-card--join">
-        <a href="#contact" class="participant-join-link">
-          <div class="participant-join-icon">+</div>
-          <div class="participant-name">¿Tu organización?</div>
-        </a>
-      </div>
-
     </div>
+
+    <button class="carousel-btn carousel-btn--next" onclick="carouselMove(1)">&#8250;</button>
   </div>
 </section>
 

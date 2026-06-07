@@ -184,6 +184,54 @@
   });
 })();
 
+// ── Carousel Participantes ───────────────────────────────────────────────────────────────
+(function initCarousel() {
+  const wrap  = document.querySelector('.participants-track-wrap');
+  const track = document.getElementById('participantsTrack');
+  if (!track || !wrap) return;
+
+  const GAP = 24;
+  const CARD_W = 220 + GAP;
+  const SPEED  = 0.6;
+  let pos    = 0;
+  let paused = false;
+  let touchStartX = 0;
+
+  function halfWidth() {
+    return track.scrollWidth / 2;
+  }
+
+  function step() {
+    if (!paused) {
+      pos += SPEED;
+      if (pos >= halfWidth()) pos -= halfWidth();
+      track.style.transform = `translateX(${-pos}px)`;
+    }
+    requestAnimationFrame(step);
+  }
+
+  requestAnimationFrame(step);
+
+  wrap.addEventListener('mouseenter', () => paused = true);
+  wrap.addEventListener('mouseleave', () => paused = false);
+
+  window.carouselMove = function(dir) {
+    pos += dir * CARD_W;
+    if (pos < 0) pos += halfWidth();
+    if (pos >= halfWidth()) pos -= halfWidth();
+  };
+
+  wrap.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+    paused = true;
+  }, { passive: true });
+
+  wrap.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) carouselMove(diff > 0 ? 1 : -1);
+    setTimeout(() => paused = false, 1200);
+  }, { passive: true });
+})();
 
 // ── Contact form ───────────────────────────────────────────────────────────────
 function handleSubmit() {
