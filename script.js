@@ -215,11 +215,36 @@
   wrap.addEventListener('mouseenter', () => paused = true);
   wrap.addEventListener('mouseleave', () => paused = false);
 
-  window.carouselMove = function(dir) {
-    pos += dir * CARD_W;
+window.carouselMove = function(dir) {
+  paused = true;
+  const target = pos + dir * CARD_W;
+  const start  = pos;
+  const change = target - start;
+  const duration = 350;
+  let startTime = null;
+
+  function ease(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
+
+  function animate(now) {
+    if (!startTime) startTime = now;
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    pos = start + change * ease(progress);
     if (pos < 0) pos += halfWidth();
     if (pos >= halfWidth()) pos -= halfWidth();
-  };
+    track.style.transform = `translateX(${-pos}px)`;
+    if (progress < 1) {
+      requestAnimationFrame(animate);
+    } else {
+      pos = target;
+      if (pos < 0) pos += halfWidth();
+      if (pos >= halfWidth()) pos -= halfWidth();
+      paused = false;
+    }
+  }
+
+  requestAnimationFrame(animate);
+};
 
   wrap.addEventListener('touchstart', e => {
     touchStartX = e.touches[0].clientX;
