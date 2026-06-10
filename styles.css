@@ -570,6 +570,7 @@ section, nav, footer {
   flex: 1;
   mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  padding-top: 8px;
 }
 
 .participants-track {
@@ -577,6 +578,7 @@ section, nav, footer {
   gap: 1.5rem;
   width: max-content;
   will-change: transform;
+  padding-top: 4px;
 }
 
 .participant-card {
