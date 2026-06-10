@@ -474,7 +474,7 @@ section, nav, footer {
 
 /* --- ABOUT --- */
 #about {
-  padding: 8rem 0;
+  padding: 5rem 0;
   background: var(--bg);
   border-top: 3px solid var(--orange);
 }
@@ -531,7 +531,7 @@ section, nav, footer {
 
 /* --- PARTICIPANTS --- */
 #participants {
-  padding: 8rem 0 4rem;
+  padding: 5rem 0 4rem;
   background: var(--bg-soft);
   border-top: 3px solid var(--cyan);
 }
@@ -647,9 +647,9 @@ section, nav, footer {
 
 /* --- CONTACT --- */
 #contact {
-  padding: 8rem 0;
-  background: var(--bg-soft);
-  border-top: 3px solid var(--cyan);
+  padding: 5rem 0;
+  background: var(--bg);
+  border-top: 3px solid var(--orange);
 }
 
 .contact-grid {
@@ -1040,7 +1040,7 @@ section, nav, footer {
 
 /* --- WHY ASTRUM --- */
 #why {
-  padding: 8rem 0;
+  padding: 5rem 0;
   background: var(--bg);
   border-top: 3px solid var(--orange);
 }
@@ -1078,69 +1078,11 @@ section, nav, footer {
 
 .why-card p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.7; }
 
-/* --- FORMATO --- */
-#formato {
-  padding: 8rem 0;
-  background: var(--bg-soft);
-  border-top: 3px solid var(--cyan);
-}
-
-.formato-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.formato-card {
-  background: var(--bg-soft);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 2rem 1.75rem;
-  position: relative;
-  transition: all var(--transition);
-  overflow: hidden;
-}
-
-.formato-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(to right, var(--cyan), var(--orange));
-  opacity: 0;
-  transition: opacity var(--transition);
-}
-
-.formato-card:hover { background: var(--white); transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0, 168, 232, 0.1); }
-.formato-card:hover::before { opacity: 1; }
-
-.formato-num {
-  font-family: var(--font-display);
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  color: var(--cyan);
-  margin-bottom: 0.75rem;
-}
-
-.formato-icon { font-size: 1.8rem; margin-bottom: 0.75rem; }
-
-.formato-card h3 {
-  font-family: var(--font-display);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  color: var(--navy);
-  margin-bottom: 0.6rem;
-}
-
-.formato-card p { font-size: 0.86rem; color: var(--text-mid); line-height: 1.7; }
-
 /* --- AGENDA --- */
 #agenda {
-  padding: 8rem 0;
-  background: var(--bg);
-  border-top: 3px solid var(--orange);
+  padding: 5rem 0;
+  background: var(--bg-soft);
+  border-top: 3px solid var(--cyan);
 }
 
 .agenda-coming {
@@ -1214,9 +1156,9 @@ section, nav, footer {
 
 /* --- SPONSORS --- */
 #sponsors {
-  padding: 8rem 0;
-  background: var(--bg-soft);
-  border-top: 3px solid var(--cyan);
+  padding: 5rem 0;
+  background: var(--bg);
+  border-top: 3px solid var(--orange);
 }
 
 .sponsors-grid {
@@ -1278,9 +1220,9 @@ section, nav, footer {
 
 /* --- ORGANIZER --- */
 #organizer {
-  padding: 8rem 0;
-  background: var(--bg);
-  border-top: 3px solid var(--orange);
+  padding: 5rem 0;
+  background: var(--bg-soft);
+  border-top: 3px solid var(--cyan);
 }
 
 .organizer-grid {
