@@ -1219,17 +1219,16 @@ section, nav, footer {
 }
 
 .sponsor-logo {
-  width: 100%;
-  max-width: 220px;
-  height: auto;
+  max-height: 70px;
+  width: auto;
+  max-width: 100%;
   object-fit: contain;
 }
 
 .sponsor-card--sm .sponsor-logo {
-  width: 100%;
-  max-width: 90px;
-  height: auto;
   max-height: 45px;
+  width: auto;
+  max-width: 100%;
   object-fit: contain;
 }
 
