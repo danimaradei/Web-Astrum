@@ -1220,14 +1220,17 @@ section, nav, footer {
 
 .sponsor-logo {
   width: 100%;
-  max-width: 200px;
+  max-width: 220px;
   height: auto;
   object-fit: contain;
 }
 
 .sponsor-card--sm .sponsor-logo {
-  max-width: 120px;
-  max-height: 55px;
+  width: 100%;
+  max-width: 90px;
+  height: auto;
+  max-height: 45px;
+  object-fit: contain;
 }
 
 .sponsor-empty-text {
