@@ -1161,26 +1161,49 @@ section, nav, footer {
   border-top: 3px solid var(--orange);
 }
 
+.sponsors-category {
+  margin-bottom: 1.25rem;
+}
+
+.sponsors-category-label {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--orange);
+  text-transform: uppercase;
+}
+
 .sponsors-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-bottom: 3rem;
 }
 
+.sponsors-grid--lg {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sponsors-grid--sm {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .sponsor-card {
+  height: 160px;
+  padding: 1.5rem;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 3rem 2rem;
-  text-align: center;
-  transition: all var(--transition);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.25rem;
-  min-height: 160px;
+  gap: 0.75rem;
+  transition: all var(--transition);
+}
+
+.sponsor-card--sm {
+  height: 80px;
+  padding: 0.75rem 1rem;
 }
 
 .sponsor-card--empty {
@@ -1195,12 +1218,25 @@ section, nav, footer {
   transform: translateY(-3px);
 }
 
+.sponsor-logo {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+.sponsor-card--sm .sponsor-logo {
+  max-width: 120px;
+  max-height: 55px;
+}
+
 .sponsor-empty-text {
   font-family: var(--font-display);
-  font-size: 0.7rem;
+  font-size: 0.62rem;
   letter-spacing: 0.12em;
   color: var(--text-muted);
   text-transform: uppercase;
+  text-align: center;
 }
 
 .sponsors-cta {
@@ -1216,7 +1252,23 @@ section, nav, footer {
   flex-wrap: wrap;
 }
 
-.sponsors-cta p { color: var(--text-mid); font-size: 0.95rem; max-width: 520px; line-height: 1.6; }
+.sponsors-cta p {
+  color: var(--text-mid);
+  font-size: 0.95rem;
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .sponsors-grid--lg { grid-template-columns: repeat(2, 1fr); }
+  .sponsors-grid--sm { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .sponsors-grid--lg,
+  .sponsors-grid--sm { grid-template-columns: repeat(2, 1fr); }
+  .sponsors-cta { flex-direction: column; align-items: flex-start; }
+}
 
 /* --- ORGANIZER --- */
 #organizer {
