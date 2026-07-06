@@ -1425,3 +1425,22 @@ section, nav, footer {
   .agenda-body { grid-template-columns: 1fr; }
   .agenda-map { min-height: 260px; }
 }
+
+
+
+/* AGREGADO PARA EL BOTON DE INSCRIPCION */
+.btn-destacado {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--cyan) 50%, var(--purple) 100%);
+  color: #ffffff; /* Texto en blanco para que resalte bien */
+  border: none; /* Quitamos el borde para que el degradado sea el protagonista */
+  box-shadow: 0 4px 15px rgba(123, 45, 139, 0.3); /* Sombra suave tono purple */
+  background-size: 200% auto; 
+  transition: all 0.4s ease;
+}
+
+.btn-destacado:hover {
+  background-position: right center; /* Desplaza el degradado al pasar el mouse */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 150, 214, 0.5); /* La sombra cambia a cyan */
+  color: #ffffff;
+}
