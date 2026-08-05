@@ -1173,63 +1173,59 @@ section, nav, footer {
   text-transform: uppercase;
 }
 
-.sponsors-grid {
+.sponsors-logos-grid {
   display: grid;
   gap: 1.5rem;
   margin-bottom: 3rem;
 }
 
-.sponsors-grid--lg {
+.sponsors-logos-grid--lg {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.sponsors-grid--sm {
+.sponsors-logos-grid--sm {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.sponsor-card {
-  height: 160px;
-  padding: 1.5rem;
+.sponsors-logo-card {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  padding: 1.75rem 2rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
   transition: all var(--transition);
 }
 
-.sponsor-card--sm {
-  height: 80px;
-  padding: 0.75rem 1rem;
+.sponsors-logos-grid--sm .sponsors-logo-card {
+  aspect-ratio: unset;
+  height: 140px;
+  padding: 1.75rem 2rem;
 }
 
-.sponsor-card--empty {
+.sponsors-logos-grid--lg .sponsors-logo-card {
+  aspect-ratio: unset;
+  height: 160px;
+}
+
+.sponsors-logo-card:hover {
+  border-color: rgba(123, 45, 139, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(123, 45, 139, 0.1);
+}
+
+.sponsors-logo-card--empty {
   border-style: dashed;
   border-color: rgba(240, 112, 48, 0.25);
   background: rgba(240, 112, 48, 0.02);
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-.sponsor-card--empty:hover {
+.sponsors-logo-card--empty:hover {
   border-color: var(--orange);
   box-shadow: 0 8px 24px rgba(240, 112, 48, 0.1);
-  transform: translateY(-3px);
-}
-
-.sponsor-logo {
-  max-height: 70px;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
-}
-
-.sponsor-card--sm .sponsor-logo {
-  max-height: 45px;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
 }
 
 .sponsor-empty-text {
@@ -1262,13 +1258,13 @@ section, nav, footer {
 }
 
 @media (max-width: 1024px) {
-  .sponsors-grid--lg { grid-template-columns: repeat(2, 1fr); }
-  .sponsors-grid--sm { grid-template-columns: repeat(3, 1fr); }
+  .sponsors-logos-grid--lg { grid-template-columns: repeat(2, 1fr); }
+  .sponsors-logos-grid--sm { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 600px) {
-  .sponsors-grid--lg,
-  .sponsors-grid--sm { grid-template-columns: repeat(2, 1fr); }
+  .sponsors-logos-grid--lg,
+  .sponsors-logos-grid--sm { grid-template-columns: repeat(2, 1fr); }
   .sponsors-cta { flex-direction: column; align-items: flex-start; }
 }
 
