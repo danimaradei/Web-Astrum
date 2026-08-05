@@ -1313,6 +1313,20 @@ section, nav, footer {
   .sponsors-cta { flex-direction: column; align-items: flex-start; }
 }
 
+@media (max-width: 768px) {
+  .sponsors-logos-grid--lg,
+  .sponsors-logos-grid--sm {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .sponsors-logos-grid--lg,
+  .sponsors-logos-grid--sm {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 /* --- ORGANIZER --- */
 #organizer {
   padding: 5rem 0;
