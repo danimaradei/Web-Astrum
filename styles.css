@@ -1473,3 +1473,18 @@ section, nav, footer {
   box-shadow: 0 8px 24px rgba(0, 122, 184, 0.5); 
   color: #ffffff;
 }
+
+
+.talleres-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--cyan);
+  border-radius: var(--radius);
+  padding: 2rem 2.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
